@@ -7,12 +7,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -28,11 +22,63 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.block-scroll {
+  max-height: 25vh;
+  min-width: 12.5vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.block-scroll .block-button {
+  background: none;
+  box-sizing: border-box;
+  border: none;
+}
+
+.block-scroll .block-button:hover {
+  background-color: #4d5463;
+}
+
+.block-scroll .block-button.selected {
+  background-color: #4d5463;
+}
+
+.new-game {
+  -webkit-animation: fadeIn 1s;
+  -o-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.guess-result {
+  width: 60%;
+  table-layout: fixed;
+  font-size: 0.9em;
+  -webkit-animation: fadeIn 500ms;
+  -o-animation: fadeIn 500ms;
+  animation: fadeIn 500ms;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.block-tooltip {
+  background-color: black;
+  color: white;
+  font-size: 0.8em;
+  z-index: 100;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: -10px;
+  margin-left: 10px;
+  pointer-events: none;
+  padding: 5px;
+  border-radius: 5px;
 }
