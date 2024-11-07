@@ -97,7 +97,7 @@ export const Andesite: BlockType = {
     hardness: 1.5,
     blast_resistance: 6,
     tool: "Pickaxe",
-    version: "1.16",
+    version: "1.8",
     color: "gray"
 }
 

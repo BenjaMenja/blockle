@@ -94,13 +94,13 @@ function Guesser(props: GuesserProps) {
     }
 
     return (
-        <>
-            <div style={{display: "flex", flexDirection: "row"}}>
+        <div style={{marginBottom: "1%"}}>
+            <div style={{display: "flex", flexDirection: "row", marginBottom: "1%"}}>
                 <Search searchString={searchString} setSearchString={setSearchString}/>
                 <Button onClick={() => Guess()} variant={`${buttonActive}`}>Submit</Button>
             </div>
             <BlockSelector searchString={searchString} selectedBlock={selectedBlock} setSelectedBlock={setSelectedBlock}/>
-        </>
+        </div>
     )
 }
 
