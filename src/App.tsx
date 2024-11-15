@@ -11,8 +11,8 @@ function App() {
           <header className="App-header">
               <Router>
                   <Routes>
-                      <Route path={'/'} element={<Game />} />
-                      <Route path={'/filters'} element={<FilterPage />}/>
+                      <Route path={'/blockle'} element={<Game />} />
+                      <Route path={'/blockle/filters'} element={<FilterPage />}/>
                   </Routes>
               </Router>
           </header>
