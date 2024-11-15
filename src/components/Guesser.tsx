@@ -4,6 +4,7 @@ import React, {useEffect, useState} from "react";
 import {BlockType} from "./Block";
 import {Button} from "react-bootstrap";
 import {Comparison, GuessResult} from "./GuessResult";
+import {VersionToNumber} from "../util";
 
 export interface GuesserProps {
     guesses: GuessResult[],
@@ -78,18 +79,6 @@ function Guesser(props: GuesserProps) {
         }
         else {
             return Comparison.EQUAL
-        }
-    }
-
-    function VersionToNumber(version: string): number {
-        if (version === "alpha") {
-            return -2
-        }
-        else if (version === "beta") {
-            return -1
-        }
-        else {
-            return parseInt(version.split(".")[1])
         }
     }
 

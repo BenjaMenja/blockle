@@ -2,7 +2,7 @@
     background-color: lightgray;
     border-radius: 5px;
     color: black;
-    padding: 3px;
+    padding: 2px;
     margin-right: 1%;
     margin-left: 1%;
     display: inline-block;
@@ -11,4 +11,5 @@
 .attribute-table {
     border-spacing: 5px;
     border-collapse: separate;
+    margin-bottom: 5%;
 }

@@ -20,13 +20,15 @@ function FilterPage() {
                     x{'<'}y
                 </div>
                 Shows all blocks whose attribute <span className={"attribute-option"}>x</span>is strictly less than <span className={"attribute-option"}>y</span>.<br/>
+                Filters can be chained together with single spaces to further assist you in finding the block you need!<br/>
+                Note: All attributes and values are case sensitive!
             </div>
             <h2>Attributes</h2>
             <table className={"attribute-table"}>
                 <tbody>
                     <tr>
-                        <td><b>Attribute</b></td>
-                        <td><b>Description</b></td>
+                        <td><b><u>Attribute</u></b></td>
+                        <td><b><u>Description</u></b></td>
                     </tr>
                     <tr>
                         <td><span className={"attribute-option"}>hardness</span></td>
@@ -53,6 +55,18 @@ function FilterPage() {
                     </tr>
                 </tbody>
             </table>
+            <h2>Examples</h2>
+            <ul style={{listStyleType: "none"}}>
+                <li>
+                    <div className={"attribute-option"}>tool=Axe</div>shows all blocks that are broken with an Axe.
+                </li>
+                <li>
+                    <div className={"attribute-option"}>{"hardness>1 version>alpha"}</div>shows all blocks with hardness greater than 1 and that were released in versions newer than the game's alpha.
+                </li>
+                <li>
+                    <div className={"attribute-option"}>{"stone version=1.8"}</div>shows all blocks with "stone" in the name that released in version 1.8.
+                </li>
+            </ul>
             <Button variant={"secondary"} onClick={() => window.location.href = "/"}>
                 Back to Game
             </Button>
