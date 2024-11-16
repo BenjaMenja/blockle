@@ -38,7 +38,7 @@ function Game() {
         <>
             <h1 style={{marginBottom: "2%"}}>Blockle</h1>
             <h3 style={{marginBottom: "1%"}}>A Minecraft themed guessing game</h3>
-            <a href={"/filters"} style={{color: "#7a29a9", fontSize: "0.8em", marginBottom: "1%"}}>Special Filters</a>
+            <a href={"/blockle/filters"} style={{color: "#7a29a9", fontSize: "0.8em", marginBottom: "1%"}}>Special Filters</a>
             <Guesser guesses={guesses} setGuesses={setGuesses} targetBlock={targetBlock} win={win}/>
             {guesses.length > 0 && <table className={"guess-result"}>
                 <tbody>

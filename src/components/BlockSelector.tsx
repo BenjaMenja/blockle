@@ -39,18 +39,15 @@ function BlockSelector(props: BlockSelectorProps) {
         let filteredBlocks: BlockType[] = blocks
         for (const param of filters) {
             filteredBlocks = filteredBlocks.filter((block, index) => {
-                    const delims: RegExpMatchArray | null = param.match(/[=<>]/)
+                    const delims: RegExpMatchArray | null = param.match(/[=<>!]/)
                     if (delims) {
-                        const split: string[] = param.split(/[=<>]/, 2)
+                        const split: string[] = param.split(/[=<>!]/, 2)
                         const key: string = split[0]
                         const value: string = split[1]
                         if (key in block) {
                             const blockFieldValue = block[key as keyof BlockType]
                             if (typeof blockFieldValue === 'string') { // Name, Technically Image, Tool, Color, Version
                                 if (key === "version") {
-                                    if (delims[0] === "=") {
-                                        return blockFieldValue === value
-                                    }
                                     let versionAsNumber: number = VersionToNumber(blockFieldValue)
 
                                     if (isNaN(versionAsNumber)) {
@@ -67,14 +64,20 @@ function BlockSelector(props: BlockSelectorProps) {
                                         }
                                     }
                                 }
-                                else if (delims[0] === "=") {
+                                if (delims[0] === "=") {
                                     return blockFieldValue === value
+                                }
+                                else if (delims[0] === "!") {
+                                    return blockFieldValue !== value
                                 }
                             }
                             else { // Hardness, Blast Resistance
                                 const valueAsNumber = parseFloat(value)
                                 if (delims[0] === "=") {
                                     return blockFieldValue === valueAsNumber
+                                }
+                                else if (delims[0] === "!") {
+                                    return blockFieldValue !== valueAsNumber
                                 }
                                 else if (delims[0] === ">") {
                                     return blockFieldValue > valueAsNumber

@@ -13,6 +13,10 @@ function FilterPage() {
                 </div>
                 Shows all blocks with attribute <span className={"attribute-option"}>x</span>that are equal to <span className={"attribute-option"}>y</span>.<br/>
                 <div className={"attribute-option"}>
+                    x{'!'}y
+                </div>
+                Shows all blocks with attribute <span className={"attribute-option"}>x</span>that are not equal to <span className={"attribute-option"}>y</span>.<br/>
+                <div className={"attribute-option"}>
                     x&gt;y
                 </div>
                 Shows all blocks whose attribute <span className={"attribute-option"}>x</span>is strictly greater than <span className={"attribute-option"}>y</span>.<br/>
@@ -66,8 +70,11 @@ function FilterPage() {
                 <li>
                     <div className={"attribute-option"}>{"stone version=1.8"}</div>shows all blocks with "stone" in the name that released in version 1.8.
                 </li>
+                <li>
+                    <div className={"attribute-option"}>{"color!orange version<beta"}</div>shows all blocks that are not orange that were released in versions older than the game's beta.
+                </li>
             </ul>
-            <Button variant={"secondary"} onClick={() => window.location.href = "/"}>
+            <Button variant={"secondary"} onClick={() => window.location.href = "/blockle"}>
                 Back to Game
             </Button>
         </div>
