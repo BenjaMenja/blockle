@@ -21,3 +21,11 @@ export function VersionToNumber(version: string): number {
         return parseFloat(version.split(".", 2)[1])
     }
 }
+
+export function NameToDisplayFormat(name: string): string {
+    const splitarr = name.split("_")
+    const format = splitarr.map((word) => {
+        return word[0].toUpperCase() + word.substring(1)
+    })
+    return format.join(" ")
+}

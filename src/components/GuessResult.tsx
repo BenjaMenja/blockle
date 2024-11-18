@@ -25,7 +25,7 @@ function GuessResultComponent(guess: GuessResult) {
                 <tr>
                     <td>
                         <img src={guess.block?.image} alt={"Guessed Block"} style={{width: "33%"}} onMouseEnter={() => setEnableTooltip(true)} onMouseLeave={() => setEnableTooltip(false)}/>
-                        {enableTooltip && <BlockTooltip block={guess.block} />}
+                        {enableTooltip && <BlockTooltip block={guess.block}/>}
                     </td>
                     <td>
                         {guess.hardness === Comparison.GREATER && <GreaterIcon />}

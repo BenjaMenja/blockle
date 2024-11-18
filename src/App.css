@@ -15,7 +15,9 @@
   align-items: center;
   justify-content: center;
   font-size: calc(8px + 2vmin);
-  color: white;
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: 400;
+  color: aqua;
 }
 
 .App-link {
@@ -31,6 +33,7 @@
   overflow-y: scroll;
   border-style: solid;
   border-width: 1px;
+  border-color: white;
 }
 
 .block-scroll .block-button {
@@ -54,9 +57,9 @@
 }
 
 .guess-result {
-  width: 60%;
+  width: 50%;
   table-layout: fixed;
-  font-size: 0.9em;
+  font-size: 0.8em;
   -webkit-animation: fadeIn 500ms;
   -o-animation: fadeIn 500ms;
   animation: fadeIn 500ms;
@@ -81,4 +84,5 @@
   pointer-events: none;
   padding: 5px;
   border-radius: 5px;
+  font-family: "Sans Serif Collection", serif;
 }

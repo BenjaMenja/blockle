@@ -1009,7 +1009,7 @@ export const BlueCandle: BlockType = {
     color: "blue"
 }
 export const BlueCarpet: BlockType = {
-    name: "carpet",
+    name: "blue_carpet",
     image: "https://minecraft.wiki/images/Blue_Carpet.png",
     hardness: 0.1,
     blast_resistance: 0.1,
@@ -1060,7 +1060,7 @@ export const BlueOrchid: BlockType = {
     blast_resistance: 0,
     tool: "Any",
     version: "1.7.2",
-    color: "blue"
+    color: "light_blue"
 }
 export const BlueShulkerBox: BlockType = {
     name: "blue_shulker_box",
@@ -1342,7 +1342,7 @@ export const BubbleCoral: BlockType = {
     color: "purple"
 }
 export const BubbleCoralBlock: BlockType = {
-    name: "coral_block",
+    name: "bubble_coral_block",
     image: "https://minecraft.wiki/images/Bubble_Coral_Block_JE2_BE1.png",
     hardness: 1.5,
     blast_resistance: 6,
@@ -1477,7 +1477,7 @@ export const Chain: BlockType = {
     color: "gray"
 }
 export const ChainCommandBlock: BlockType = {
-    name: "command_block",
+    name: "chain_command_block",
     image: "https://minecraft.wiki/images/Chain_Command_Block.gif",
     hardness: -1,
     blast_resistance: 3600000,
@@ -1540,7 +1540,7 @@ export const CherryHangingSign: BlockType = {
     color: "pink"
 }
 export const CherryLeaves: BlockType = {
-    name: "leaves",
+    name: "cherry_leaves",
     image: "https://minecraft.wiki/images/Cherry_Leaves_JE2.png",
     hardness: 0.2,
     blast_resistance: 0.2,
@@ -1558,7 +1558,7 @@ export const CherryLog: BlockType = {
     color: "pink"
 }
 export const CherryPlanks: BlockType = {
-    name: "planks",
+    name: "cherry_planks",
     image: "https://minecraft.wiki/images/Cherry_Planks_JE1_BE1.png",
     hardness: 2,
     blast_resistance: 3,
@@ -1703,7 +1703,7 @@ export const ChiseledRedSandstone: BlockType = {
 }
 export const ChiseledResinBricks: BlockType = {
     name: "chiseled_resin_bricks",
-    image: "https://minecraft.wiki/images/Crafting_Table_JE4_BE3.png",
+    image: "https://minecraft.wiki/images/Chiseled_Resin_Bricks_JE2_BE3.png",
     hardness: 1.5,
     blast_resistance: 6,
     tool: "Pickaxe",
@@ -1865,7 +1865,7 @@ export const CobblestoneWall: BlockType = {
 }
 export const CocoaBeans: BlockType = {
     name: "cocoa_beans",
-    image: "https://minecraft.wiki/images/Cocoa_Age_0_(S)_JE5.png",
+    image: "https://minecraft.wiki/images/Cocoa_Age_2_(S)_JE5.png",
     hardness: 0.2,
     blast_resistance: 3,
     tool: "Axe",
@@ -2018,7 +2018,7 @@ export const CraftingTable: BlockType = {
 }
 export const CreakingHeart: BlockType = {
     name: "creaking_heart",
-    image: "https://minecraft.wiki/images/Crafting_Table_JE4_BE3.png",
+    image: "https://minecraft.wiki/images/Creaking_Heart_JE2_BE2.png",
     hardness: 5,
     blast_resistance: 5,
     tool: "Axe",
@@ -2305,7 +2305,7 @@ export const CyanConcretePowder: BlockType = {
     color: "cyan"
 }
 export const CyanGlazedTerracotta: BlockType = {
-    name: "glazed_terracotta",
+    name: "cyan_glazed_terracotta",
     image: "https://minecraft.wiki/images/Cyan_Glazed_Terracotta_JE2_BE2.png",
     hardness: 1.4,
     blast_resistance: 1.4,
@@ -3232,7 +3232,7 @@ export const FloweringAzalea: BlockType = {
     color: "green"
 }
 export const FloweringAzaleaLeaves: BlockType = {
-    name: "leaves",
+    name: "flowering_azalea_leaves",
     image: "https://minecraft.wiki/images/Flowering_Azalea_Leaves.png",
     hardness: 0.2,
     blast_resistance: 0.2,
@@ -3300,7 +3300,7 @@ export const Glowstone: BlockType = {
     hardness: 0.3,
     blast_resistance: 0.3,
     tool: "Any",
-    version: "v1.2.0",
+    version: "alpha",
     color: "yellow"
 }
 export const GoldOre: BlockType = {
@@ -3999,7 +3999,7 @@ export const Light: BlockType = {
 }
 export const LightBlueBanner: BlockType = {
     name: "light_blue_banner",
-    image: "https://minecraft.wiki/images/LightBlue_Banner.gif",
+    image: "https://minecraft.wiki/images/Light_Blue_Banner.gif",
     hardness: 1,
     blast_resistance: 1,
     tool: "Axe",
@@ -5107,7 +5107,7 @@ export const Obsidian: BlockType = {
 }
 export const OchreFroglight: BlockType = {
     name: "ochre_froglight",
-    image: "https://minecraft.wiki/images/Pearlescent_Froglight_JE1.png",
+    image: "https://minecraft.wiki/images/Ochre_Froglight_JE1.png",
     hardness: 0.3,
     blast_resistance: 0.3,
     tool: "Any",
@@ -5647,7 +5647,7 @@ export const PolishedBlackstoneButton: BlockType = {
 }
 export const PolishedBlackstonePressurePlate: BlockType = {
     name: "polished_blackstone_pressure_plate",
-    image: "https://minecraft.wiki/images/Merge-arrows.svg",
+    image: "https://minecraft.wiki/images/Polished_Blackstone_Pressure_Plate_JE1_BE1.png",
     hardness: 0.5,
     blast_resistance: 0.5,
     tool: "Pickaxe",
@@ -5817,8 +5817,8 @@ export const Poppy: BlockType = {
     color: "red"
 }
 export const Potato: BlockType = {
-    name: "potato",
-    image: "https://minecraft.wiki/images/Potatoes_Age_0-1_JE8.png",
+    name: "potatoes",
+    image: "https://minecraft.wiki/images/Potatoes_Age_7_JE8.png",
     hardness: 0,
     blast_resistance: 0,
     tool: "",
@@ -6124,7 +6124,7 @@ export const RedBanner: BlockType = {
 }
 export const RedBed: BlockType = {
     name: "red_bed",
-    image: "https://minecraft.wiki/images/Red_Bed.png",
+    image: "https://minecraft.wiki/images/Red_Bed_(N).png",
     hardness: 0.2,
     blast_resistance: 0.2,
     tool: "Any",
@@ -6412,7 +6412,7 @@ export const RespawnAnchor: BlockType = {
 }
 export const ResinBricks: BlockType = {
     name: "resin_bricks",
-    image: "https://minecraft.wiki/images/Crafting_Table_JE4_BE3.png",
+    image: "https://minecraft.wiki/images/Resin_Bricks_JE1_BE2.png",
     hardness: 1.5,
     blast_resistance: 6,
     tool: "Pickaxe",
@@ -6421,7 +6421,7 @@ export const ResinBricks: BlockType = {
 }
 export const ResinBrickSlab: BlockType = {
     name: "resin_brick_slab",
-    image: "https://minecraft.wiki/images/Crafting_Table_JE4_BE3.png",
+    image: "https://minecraft.wiki/images/Resin_Brick_Slab_JE1_BE2.png",
     hardness: 1.5,
     blast_resistance: 6,
     tool: "Pickaxe",
@@ -6430,7 +6430,7 @@ export const ResinBrickSlab: BlockType = {
 }
 export const ResinBrickStairs: BlockType = {
     name: "resin_brick_stairs",
-    image: "https://minecraft.wiki/images/Crafting_Table_JE4_BE3.png",
+    image: "https://minecraft.wiki/images/Resin_Brick_Stairs_JE1_BE2.png",
     hardness: 1.5,
     blast_resistance: 6,
     tool: "Pickaxe",
@@ -6439,7 +6439,7 @@ export const ResinBrickStairs: BlockType = {
 }
 export const ResinBrickWall: BlockType = {
     name: "resin_brick_wall",
-    image: "https://minecraft.wiki/images/Crafting_Table_JE4_BE3.png",
+    image: "https://minecraft.wiki/images/Resin_Brick_Wall_JE1_BE2.png",
     hardness: 1.5,
     blast_resistance: 6,
     tool: "Pickaxe",
@@ -7328,9 +7328,9 @@ export const SuspiciousSand: BlockType = {
     version: "1.19.4",
     color: "cream"
 }
-export const SweetBerries: BlockType = {
-    name: "sweet_berries",
-    image: "https://minecraft.wiki/images/Sweet_Berry_Bush_Age_0_JE1_BE1.png",
+export const SweetBerryBush: BlockType = {
+    name: "sweet_berry_bush",
+    image: "https://minecraft.wiki/images/Sweet_Berry_Bush_Age_3_JE1_BE1.png",
     hardness: 0,
     blast_resistance: 0,
     tool: "Any",
@@ -7851,17 +7851,17 @@ export const WeepingVines: BlockType = {
     color: "dark_red"
 }
 export const WetSponge: BlockType = {
-    name: "sponge",
-    image: "https://minecraft.wiki/images/Sponge_JE3_BE3.png",
+    name: "wet_sponge",
+    image: "https://minecraft.wiki/images/Wet_Sponge_JE2_BE2.png",
     hardness: 0.6,
     blast_resistance: 0.6,
     tool: "Hoe",
     version: "1.8",
     color: "yellow"
 }
-export const WheatSeeds: BlockType = {
-    name: "wheat_seeds",
-    image: "https://minecraft.wiki/images/Wheat_Age_0_JE9.png",
+export const WheatCrop: BlockType = {
+    name: "wheat_crop",
+    image: "https://minecraft.wiki/images/Wheat_Age_7_JE10.png",
     hardness: 0,
     blast_resistance: 0,
     tool: "None",
@@ -7879,7 +7879,7 @@ export const WhiteBanner: BlockType = {
 }
 export const WhiteBed: BlockType = {
     name: "white_bed",
-    image: "https://minecraft.wiki/images/White_Bed.png",
+    image: "https://minecraft.wiki/images/White_Bed_(N).png",
     hardness: 0.2,
     blast_resistance: 0.2,
     tool: "Any",
@@ -7969,7 +7969,7 @@ export const WhiteStainedTerracotta: BlockType = {
 }
 export const WhiteWool: BlockType = {
     name: "white_wool",
-    image: "https://minecraft.wiki/images/White_Wool_JE3_BE3.png",
+    image: "https://minecraft.wiki/images/White_Wool_JE2_BE2.png",
     hardness: 0.8,
     blast_resistance: 0.8,
     tool: "Shears",

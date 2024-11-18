@@ -5,12 +5,13 @@ import {BlockType} from "./Block";
 import {Button} from "react-bootstrap";
 import {Comparison, GuessResult} from "./GuessResult";
 import {VersionToNumber} from "../util";
+import {GameState} from "../pages/Game";
 
 export interface GuesserProps {
     guesses: GuessResult[],
     setGuesses: React.Dispatch<React.SetStateAction<GuessResult[]>>,
     targetBlock: BlockType,
-    win: boolean
+    gameState: GameState
 }
 
 function Guesser(props: GuesserProps) {
@@ -30,7 +31,7 @@ function Guesser(props: GuesserProps) {
     }, [selectedBlock])
 
     function Guess(): void {
-        if (selectedBlock.name === "") {
+        if (selectedBlock.name === "" || props.gameState !== GameState.PLAYING) {
             return
         }
         const hardness: Comparison = Compare(selectedBlock.hardness, props.targetBlock.hardness)
@@ -88,7 +89,7 @@ function Guesser(props: GuesserProps) {
                 <Search searchString={searchString} setSearchString={setSearchString}/>
                 <Button onClick={() => Guess()} variant={`${buttonActive}`}>Submit</Button>
             </div>
-            <BlockSelector searchString={searchString} selectedBlock={selectedBlock} setSelectedBlock={setSelectedBlock}/>
+            <BlockSelector searchString={searchString} setSearchString={setSearchString} selectedBlock={selectedBlock} setSelectedBlock={setSelectedBlock}/>
         </div>
     )
 }

@@ -7,6 +7,7 @@ import {VersionToNumber} from "../util";
 export interface BlockSelectorProps {
     searchString: string,
     selectedBlock: BlockType,
+    setSearchString: React.Dispatch<React.SetStateAction<string>>,
     setSelectedBlock: React.Dispatch<React.SetStateAction<BlockType>>
 }
 
@@ -20,6 +21,7 @@ function BlockSelector(props: BlockSelectorProps) {
         for (const block of blocks) {
             if (block.name === blockName) {
                 props.setSelectedBlock(block)
+                props.setSearchString(block.name)
             }
         }
     }
@@ -60,7 +62,7 @@ function BlockSelector(props: BlockSelectorProps) {
                                             return versionAsNumber > valueAsNumber
                                         }
                                         else if (delims[0] === "<") {
-                                            return versionAsNumber > valueAsNumber
+                                            return versionAsNumber < valueAsNumber
                                         }
                                     }
                                 }
