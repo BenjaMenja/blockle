@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/blockle/static/css/main.fd58ca87.css",
-    "main.js": "/blockle/static/js/main.1a09a029.js",
+    "main.css": "/blockle/static/css/main.954701d0.css",
+    "main.js": "/blockle/static/js/main.06810325.js",
     "static/js/453.65be1720.chunk.js": "/blockle/static/js/453.65be1720.chunk.js",
     "index.html": "/blockle/index.html",
-    "main.fd58ca87.css.map": "/blockle/static/css/main.fd58ca87.css.map",
-    "main.1a09a029.js.map": "/blockle/static/js/main.1a09a029.js.map",
+    "main.954701d0.css.map": "/blockle/static/css/main.954701d0.css.map",
+    "main.06810325.js.map": "/blockle/static/js/main.06810325.js.map",
     "453.65be1720.chunk.js.map": "/blockle/static/js/453.65be1720.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd58ca87.css",
-    "static/js/main.1a09a029.js"
+    "static/css/main.954701d0.css",
+    "static/js/main.06810325.js"
   ]
 }
