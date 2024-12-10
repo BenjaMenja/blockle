@@ -5821,7 +5821,7 @@ export const Potato: BlockType = {
     image: "https://minecraft.wiki/images/Potatoes_Age_7_JE8.png",
     hardness: 0,
     blast_resistance: 0,
-    tool: "",
+    tool: "Any",
     version: "1.4.2",
     color: "green"
 }

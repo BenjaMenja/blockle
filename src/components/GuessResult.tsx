@@ -1,6 +1,5 @@
 import {BlockType} from "./Block";
-import {useState} from "react";
-import BlockTooltip from "./BlockTooltip";
+import React, {useEffect, useRef, useState} from "react";
 
 export interface GuessResult {
     block: BlockType,
@@ -19,13 +18,42 @@ export enum Comparison {
 
 function GuessResultComponent(guess: GuessResult) {
     const [enableTooltip, setEnableTooltip] = useState<boolean>(false)
+    const tooltipRef = useRef<HTMLDivElement>(null)
+    const imageRef = useRef<HTMLImageElement>(null)
+    const handleMouseEnter = () => {
+        setEnableTooltip(true)
+        setTooltipPos()
+    }
+
+    const setTooltipPos = () => {
+        const tooltip = tooltipRef.current
+        if (tooltip) {
+            const tooltipRect = tooltip.getBoundingClientRect()
+            const trigger = imageRef.current
+            if (trigger) {
+                const triggerRect = trigger.getBoundingClientRect()
+                tooltip.style.top = `${triggerRect.top - (tooltipRect.height / 4) + window.scrollY}px`
+                tooltip.style.left = `${triggerRect.left - tooltipRect.width - 10}px`
+            }
+        }
+    }
+    useEffect(() => {
+        setTooltipPos()
+    }, [])
     return (
         <table className={"guess-result"}>
             <tbody>
                 <tr>
                     <td>
-                        <img src={guess.block?.image} alt={"Guessed Block"} style={{width: "33%"}} onMouseEnter={() => setEnableTooltip(true)} onMouseLeave={() => setEnableTooltip(false)}/>
-                        {enableTooltip && <BlockTooltip block={guess.block}/>}
+                        <img ref={imageRef} src={guess.block?.image} alt={"Guessed Block"} style={{width: "25%"}} onMouseEnter={handleMouseEnter} onMouseLeave={() => setEnableTooltip(false)}/>
+                        <div ref={tooltipRef} className={"block-tooltip"} style={{position: "absolute", visibility: enableTooltip ? "visible" : "hidden", marginLeft: "0px"}}>
+                            <span>{guess.block.name}</span>
+                            <span>Hardness: {guess.block.hardness}</span>
+                            <span>Blast Resistance: {guess.block.blast_resistance}</span>
+                            <span>Tool: {guess.block.tool}</span>
+                            <span>Version: {guess.block.version}</span>
+                            <span>Color: {guess.block.color}</span>
+                        </div>
                     </td>
                     <td>
                         {guess.hardness === Comparison.GREATER && <GreaterIcon />}

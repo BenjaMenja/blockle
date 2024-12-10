@@ -1,14 +1,15 @@
 import {BlockType, Position} from "./Block";
-import React from "react";
+import React, {useRef} from "react";
 
 export interface TooltipProps {
     block: BlockType,
-    position?: Position
+    position: Position
 }
 
-function BlockTooltip(props: TooltipProps) {
+function BlockTooltipPortal(props: TooltipProps) {
+    const tooltipRef = useRef<HTMLDivElement>(null)
     return (
-        <div className={"block-tooltip"} style={{position: "absolute", top: props.position ? `${props.position?.y}px` : undefined, left:`${props.position?.x}px`}}>
+        <div ref={tooltipRef} className={"block-tooltip"} style={{position: "absolute", fontSize: '1rem', top: props.position ? `${props.position.y}px` : undefined, left:`${props.position.x}px`}}>
             <span>{props.block.name}</span>
             <span>Hardness: {props.block.hardness}</span>
             <span>Blast Resistance: {props.block.blast_resistance}</span>
@@ -19,4 +20,4 @@ function BlockTooltip(props: TooltipProps) {
     )
 }
 
-export default BlockTooltip
+export default BlockTooltipPortal

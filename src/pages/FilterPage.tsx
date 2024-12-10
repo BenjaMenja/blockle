@@ -3,9 +3,12 @@ import {Button} from "react-bootstrap";
 
 function FilterPage() {
     return (
-        <div style={{maxWidth: "60%", fontSize: "0.9em"}}>
+        <div style={{maxWidth: "62%", fontSize: "0.9em"}}>
             <h1>Blockle Filter Guide</h1>
-            <p style={{marginBottom: "5%"}}>Blockle introduces custom search options to help you search for blocks that fit a criteria!</p>
+            <p style={{marginBottom: "2.5%"}}>Blockle introduces custom search options to help you search for blocks that fit a criteria!</p>
+            <Button variant={"secondary"} onClick={() => window.location.href = "/blockle"} style={{marginBottom: "2.5%"}}>
+                Back to Game
+            </Button>
             <h2>How to use</h2>
             <div style={{marginBottom: "5%"}}>
                 <div className={"attribute-option"}>
@@ -46,12 +49,12 @@ function FilterPage() {
                         <td><span className={"attribute-option"}>tool</span></td>
                         <td>
                             The preferred tool to break the block. Valid tools are <span className={"attribute-option"}>Shovel</span>,<span className={"attribute-option"}>Axe</span>,<span className={"attribute-option"}>Pickaxe</span>,
-                            <span className={"attribute-option"}>Hoe</span>,<span className={"attribute-option"}>Shears</span>
+                            <span className={"attribute-option"}>Hoe</span>,<span className={"attribute-option"}>Shears</span>,<span className={"attribute-option"}>Bucket</span>,<span className={"attribute-option"}>None</span>,<span className={"attribute-option"}>Any</span>
                         </td>
                     </tr>
                     <tr>
                         <td><span className={"attribute-option"}>version</span></td>
-                        <td>The version this block was added to the game. Valid versions are <span className={"attribute-option"}>alpha</span>,<span className={"attribute-option"}>beta</span><span className={"attribute-option"}>1.x.x</span>, where x is a value between 0-9</td>
+                        <td>The version this block was added to the game. Valid versions are <span className={"attribute-option"}>pre-classic</span>,<span className={"attribute-option"}>classic</span>,<span className={"attribute-option"}>indev</span>,<span className={"attribute-option"}>infdev</span>,<span className={"attribute-option"}>alpha</span>,<span className={"attribute-option"}>beta</span>,<span className={"attribute-option"}>1.x.x</span>, where x is a number that corresponds to a version.</td>
                     </tr>
                     <tr>
                         <td><span className={"attribute-option"}>color</span></td>
@@ -74,7 +77,7 @@ function FilterPage() {
                     <div className={"attribute-option"}>{"color!orange version<beta"}</div>shows all blocks that are not orange that were released in versions older than the game's beta.
                 </li>
             </ul>
-            <Button variant={"secondary"} onClick={() => window.location.href = "/blockle"}>
+            <Button variant={"secondary"} onClick={() => window.location.href = "/blockle"} style={{marginBottom: '5%'}}>
                 Back to Game
             </Button>
         </div>

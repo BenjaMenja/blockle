@@ -19,6 +19,7 @@ function Game() {
     const [guesses, setGuesses] = useState<GuessResult[]>([])
     const [gameState, setGameState] = useState<GameState>(GameState.PLAYING)
     const [remainingGuesses, setRemainingGuesses] = useState<number>(6)
+    const [searchString, setSearchString] = useState<string>("")
 
     useEffect(() => {
         setRemainingGuesses(maxGuesses - guesses.length)
@@ -46,14 +47,15 @@ function Game() {
         setGameState(GameState.PLAYING)
         setGuesses([])
         setTargetBlock(chooseTarget())
+        setSearchString("")
     }
     return (
         <>
-            <h1 style={{marginBottom: "2%"}}>Blockle</h1>
+            <h1 style={{marginBottom: "2%", marginTop: "2%"}}>Blockle</h1>
             <h3 style={{marginBottom: "1%"}}>A Minecraft themed guessing game</h3>
             <a href={"/blockle/filters"} style={{color: "#7a29a9", fontSize: "0.8em", marginBottom: "1%"}}>Special Filters</a>
             <span>Guesses Remaining: {remainingGuesses} / {maxGuesses}</span>
-            <Guesser guesses={guesses} setGuesses={setGuesses} targetBlock={targetBlock} gameState={gameState}/>
+            <Guesser guesses={guesses} setGuesses={setGuesses} targetBlock={targetBlock} gameState={gameState} searchString={searchString} setSearchString={setSearchString}/>
             {guesses.length > 0 && <table className={"guess-result"}>
                 <tbody>
                 <tr>
@@ -79,13 +81,14 @@ function Game() {
                 </tbody>
             </table>}
             {guesses.map((guess, index) => <GuessResultComponent key={index} block={nameToBlock(guess.block.name)} hardness={guess.hardness} blast_resistance={guess.blast_resistance} tool={guess.tool} version={guess.version} color={guess.color}/>)}
-            {gameState === GameState.LOSE && <div>
+            {gameState !== GameState.PLAYING && <div>
                 <span>The block was: <img src={targetBlock.image} alt={targetBlock.name} style={{maxWidth: "10%"}}/>{NameToDisplayFormat(targetBlock.name)}</span>
             </div>}
             {gameState !== GameState.PLAYING && <div className={"new-game"}>
                 <Button variant={"primary"} onClick={handleNewGame}>Start New Game</Button>
             </div>}
-
+            <br/>
+            <br/>
         </>
     )
 }

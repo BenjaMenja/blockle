@@ -1,6 +1,7 @@
 import React, {useState} from "react";
-import BlockTooltip, {TooltipProps} from "./BlockTooltip";
+import {TooltipProps} from "./BlockTooltipPortal";
 import ReactDOM from "react-dom"
+import BlockTooltipPortal from "./BlockTooltipPortal";
 
 export interface BlockType {
     name: string,
@@ -34,7 +35,7 @@ function Block(props: TooltipProps) {
         <div style={{display: "flex", flexDirection: "row"}} onMouseEnter={() => setEnableTooltip(true)} onMouseLeave={() => setEnableTooltip(false)}>
             <img src={props.block.image} alt={props.block.name} style={{width: "40px", height: "auto"}}/>
             <span style={{alignSelf: "center", marginLeft: "1em"}}>{displayName}</span>
-            {enableTooltip && ReactDOM.createPortal(<BlockTooltip position={props.position} block={props.block}/>, document.body)}
+            {enableTooltip && ReactDOM.createPortal(<BlockTooltipPortal position={props.position} block={props.block}/>, document.body)}
         </div>
     )
 }
