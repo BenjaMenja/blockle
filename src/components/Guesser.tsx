@@ -11,11 +11,12 @@ export interface GuesserProps {
     guesses: GuessResult[],
     setGuesses: React.Dispatch<React.SetStateAction<GuessResult[]>>,
     targetBlock: BlockType,
-    gameState: GameState
+    gameState: GameState,
+    searchString: string,
+    setSearchString: React.Dispatch<React.SetStateAction<string>>
 }
 
 function Guesser(props: GuesserProps) {
-    const [searchString, setSearchString] = useState<string>("")
     const [selectedBlock, setSelectedBlock] = useState<BlockType>({
         blast_resistance: -1, hardness: -1, image: "", name: "", tool: "", version: "", color: ""
     })
@@ -51,6 +52,7 @@ function Guesser(props: GuesserProps) {
         setSelectedBlock({
             blast_resistance: -1, hardness: -1, image: "", name: "", tool: "", version: "", color: ""
         })
+        props.setSearchString("")
     }
 
     function Compare(guessValue: number, targetValue: number): Comparison {
@@ -86,10 +88,10 @@ function Guesser(props: GuesserProps) {
     return (
         <div style={{marginBottom: "1%"}}>
             <div style={{display: "flex", flexDirection: "row", marginBottom: "1%"}}>
-                <Search searchString={searchString} setSearchString={setSearchString}/>
+                <Search searchString={props.searchString} setSearchString={props.setSearchString}/>
                 <Button onClick={() => Guess()} variant={`${buttonActive}`}>Submit</Button>
             </div>
-            <BlockSelector searchString={searchString} setSearchString={setSearchString} selectedBlock={selectedBlock} setSelectedBlock={setSelectedBlock}/>
+            <BlockSelector searchString={props.searchString} setSearchString={props.setSearchString} selectedBlock={selectedBlock} setSelectedBlock={setSelectedBlock}/>
         </div>
     )
 }
